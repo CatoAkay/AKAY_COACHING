@@ -77,7 +77,20 @@ function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.send("service_2iorjdh", "template_vhscy1f", formData, "tAULykMHD46veExPq")
+    // Create a formatted message including name and email
+    const message = `
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Message: ${formData.message}
+    `;
+
+    const emailParams = {
+      name: formData.name,
+      email: formData.email,
+      message: message,
+    };
+
+    emailjs.send("service_2iorjdh", "template_vhscy1f", emailParams, "tAULykMHD46veExPq")
       .then((response) => {
         console.log("Email sent successfully!", response.status, response.text);
         // Optionally reset the form after submission
