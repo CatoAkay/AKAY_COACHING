@@ -67,7 +67,9 @@ function About() {
 
       <StyledTitle>More Info</StyledTitle>
       <StyledDescription>
-        Hi! I'm Akay, a dedicated fitness coach passionate about helping people reach their full potential. With years of experience in CrossFit and personal training, I focus on holistic development, building both physical strength and mental resilience.
+        Hi! I'm Akay, a dedicated fitness coach passionate about helping people reach their full potential. With years
+        of experience in CrossFit and personal training, I focus on holistic development, building both physical
+        strength and mental resilience.
       </StyledDescription>
     </StyledAboutSection>
   );

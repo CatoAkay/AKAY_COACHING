@@ -33,6 +33,11 @@ function Expect() {
         nutrition advice, and constant support. You'll push your boundaries and
         achieve results you never thought possible.
       </Description>
+      <img
+        src="/pic/cato3.jpg"
+        alt="About Akay"
+        className="section-image"
+      />
     </Section>
   );
 }
