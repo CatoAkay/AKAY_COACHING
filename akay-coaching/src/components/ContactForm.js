@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import emailjs from "emailjs-com"; // Import EmailJS
 
 const ContactSection = styled.section`
     padding: 100px 20px;
@@ -75,8 +76,16 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+
+    emailjs.send("service_2iorjdh", "template_vhscy1f", formData, "tAULykMHD46veExPq")
+      .then((response) => {
+        console.log("Email sent successfully!", response.status, response.text);
+        // Optionally reset the form after submission
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((err) => {
+        console.error("Failed to send email.", err);
+      });
   };
 
   return (
