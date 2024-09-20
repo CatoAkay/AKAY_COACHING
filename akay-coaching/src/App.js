@@ -6,9 +6,11 @@ import About from "./components/About";
 import Expect from "./components/Expect";
 import Price from "./components/Price";
 import ContactForm from "./components/ContactForm";
-import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import GlobalStyle from './components/GlobalStyle';
+import Feedback from './components/Feedback';
+import './App.css'
+import Testimonials from './components/Testimonials';
 
 const Container = styled.div`
   font-family: Arial, Helvetica, sans-serif;
@@ -49,7 +51,7 @@ function App() {
       <About />
       <Expect />
       <Price />
-      <Testimonials />
+      <Feedback />
       <ContactForm />
       <Footer />
     </Container>
