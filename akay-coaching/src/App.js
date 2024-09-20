@@ -23,21 +23,28 @@ const Navigation = styled.nav`
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: rgba(20, 20, 20, 0.9); /* Darker background */
-    padding: 15px 0; /* Increased padding for a more spacious look */
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(0, 0, 0, 0.8));
+    padding: 15px 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 20px 20px;
 `;
 
 const NavLink = styled(Link)`
-    color: #dcdcdc; /* Light gray for text */
+    color: #dcdcdc;
     font-weight: bold;
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; /* Ensures the cursor is a pointer on hover */
+
+    &.active {
+        color: #f76c6c;
+        text-decoration: underline;
+    }
 
     &:hover {
-        color: #f76c6c; /* Highlight color on hover */
-        transform: scale(1.1); /* Slight scale effect */
+        color: #f76c6c;
+        transform: scale(1.1);
     }
 `;
 
@@ -46,10 +53,10 @@ function App() {
     <Container>
       <GlobalStyle />
       <Navigation>
-        <NavLink to="about" smooth={true} duration={500}>About Me</NavLink>
-        <NavLink to="expect" smooth={true} duration={500}>What to Expect</NavLink>
-        <NavLink to="price" smooth={true} duration={500}>Price</NavLink>
-        <NavLink to="contact" smooth={true} duration={500}>Contact</NavLink>
+        <NavLink to="about" smooth={true} duration={500} activeClass="active">About Me</NavLink>
+        <NavLink to="expect" smooth={true} duration={500} activeClass="active">What to Expect</NavLink>
+        <NavLink to="price" smooth={true} duration={500} activeClass="active">Price</NavLink>
+        <NavLink to="contact" smooth={true} duration={500} activeClass="active">Contact</NavLink>
       </Navigation>
       <Header />
       <About />
