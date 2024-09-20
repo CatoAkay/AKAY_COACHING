@@ -4,7 +4,6 @@ import styled from "styled-components";
 const Section = styled.section`
   padding: 100px 20px;
   text-align: center;
-  background-color: #f7f7f7;
 `;
 
 const Title = styled.h2`
