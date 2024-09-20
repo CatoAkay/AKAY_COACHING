@@ -10,7 +10,6 @@ const HeaderSection = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
     text-align: center;
 
     &:before {
@@ -20,7 +19,7 @@ const HeaderSection = styled.header`
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.7); /* Slightly darker overlay for better contrast */
         z-index: 1;
     }
 `;
@@ -29,14 +28,23 @@ const Title = styled.h1`
     font-size: 4rem;
     padding: 20px;
     position: relative;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: #dcdcdc; /* Lighter gray for better readability */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Stronger shadow for better contrast */
+    font-family: 'Arial Black', sans-serif; /* A bolder font for emphasis */
+`;
+
+const Subtitle = styled.h2`
+    font-size: 2rem;
+    color: #ffffff; /* White color for better contrast */
+    margin-top: 10px; /* Space between title and subtitle */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Strong shadow for depth */
 `;
 
 function Header() {
   return (
     <HeaderSection>
       <Title>Akay Coaching</Title>
+      <Subtitle>Your Journey to Fitness Awaits</Subtitle>
     </HeaderSection>
   );
 }
