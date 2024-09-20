@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 import GlobalStyle from './components/GlobalStyle';
 import Feedback from './components/Feedback';
 import './App.css';
-import Testimonials from './components/Testimonials';
 
 const Container = styled.div`
     font-family: Arial, Helvetica, sans-serif;
