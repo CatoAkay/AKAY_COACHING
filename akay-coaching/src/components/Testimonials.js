@@ -41,7 +41,7 @@ const Testimonials = () => {
           health, or well-being, I'm here to guide you every step of the way.
         </p>
         <img
-          src="https://via.placeholder.com/600x400"
+          src="/pic/cato1.jpg"
           alt="About Akay"
           className="section-image"
         />
@@ -56,7 +56,7 @@ const Testimonials = () => {
           <li>Support and motivation to keep you going</li>
         </ul>
         <img
-          src="https://via.placeholder.com/600x400"
+          src="/pic/cato2.jpg"
           alt="What to Expect"
           className="section-image"
         />

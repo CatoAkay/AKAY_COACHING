@@ -8,6 +8,7 @@ import Price from "./components/Price";
 import ContactForm from "./components/ContactForm";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
+import GlobalStyle from './components/GlobalStyle';
 
 const Container = styled.div`
   font-family: Arial, Helvetica, sans-serif;
@@ -37,6 +38,7 @@ const NavLink = styled(Link)`
 function App() {
   return (
     <Container>
+      <GlobalStyle />
       <Navigation>
         <NavLink to="about" smooth={true} duration={500}>About Me</NavLink>
         <NavLink to="expect" smooth={true} duration={500}>What to Expect</NavLink>
