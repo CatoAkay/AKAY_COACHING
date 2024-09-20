@@ -1,9 +1,14 @@
-import React from "react";
 import styled from "styled-components";
+import React from 'react';
 
-const FooterSection = styled.footer`
-    padding: 20px;
-    text-align: center;
-    background-color: #333;
-    color: white
-`
+const FooterSection = () => {
+  return (
+    <div className="app-container">
+      <footer className="footer">
+        <p>&copy; 2024 Akay Coaching. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+};
+
+export default FooterSection;

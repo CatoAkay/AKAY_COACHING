@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css'; // You can add your CSS styles here
+import '../App.css'; // You can add your CSS styles here
 
-const App = () => {
+const Testimonials = () => {
   // Testimonials data
   const testimonialsData = [
     {
@@ -37,7 +37,8 @@ const App = () => {
       <section id="about" className="about-section">
         <h2>About Me</h2>
         <p>
-          Hi, I'm Akay, a certified coach passionate about helping you reach your full potential. Whether it's fitness, health, or well-being, I'm here to guide you every step of the way.
+          Hi, I'm Akay, a certified coach passionate about helping you reach your full potential. Whether it's fitness,
+          health, or well-being, I'm here to guide you every step of the way.
         </p>
         <img
           src="https://via.placeholder.com/600x400"
@@ -88,33 +89,8 @@ const App = () => {
           className="section-image"
         />
       </section>
-
-      {/* Contact Form Section */}
-      <section id="contact" className="contact-section">
-        <h2>Contact Me</h2>
-        <form className="contact-form">
-          <label>
-            Name:
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            Email:
-            <input type="email" name="email" required />
-          </label>
-          <label>
-            Message:
-            <textarea name="message" required></textarea>
-          </label>
-          <button type="submit">Submit</button>
-        </form>
-      </section>
-
-      {/* Footer Section */}
-      <footer className="footer">
-        <p>&copy; 2024 Akay Coaching. All rights reserved.</p>
-      </footer>
     </div>
   );
 };
 
-export default App;
+export default Testimonials;
