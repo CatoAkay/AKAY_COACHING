@@ -1,11 +1,7 @@
 [build]
-command = "npm run build"
-publish = "akay-coaching/build"  # Assuming this is the correct path
+command = "npm ci && npm run build"  # Clean install
+publish = "akay-coaching/build"
 
 [build.environment]
 NODE_VERSION = "18.20.4"
-NPM_VERSION = "10.8.3"  # Use the latest compatible version
-
-[context.production.environment]
-NODE_VERSION = "18.20.4"
-NPM_VERSION = "10.8.3"  # Ensures the same npm version is used in production
+NPM_VERSION = "10.8.3"
