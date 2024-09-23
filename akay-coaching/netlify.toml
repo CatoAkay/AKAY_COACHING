@@ -1,8 +1,0 @@
-[build]
-command = "npm ci --legacy-peer-deps && npm run build"
-publish = "build"
-
-[build.environment]
-NODE_VERSION = "20"
-NPM_VERSION = "10.8.3"
-NPM_INSTALL_TIMEOUT = "600000"  # 10-minute timeout for npm install
