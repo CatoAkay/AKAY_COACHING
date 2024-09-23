@@ -1,6 +1,8 @@
 [build]
 command = "npm run build"
 publish = "build"
+node_version = "18.20.4"  # or any newer version compatible with your project
+NPM_VERSION = "10.7.0" # or any newer compatible version
 
 [context.production.environment]
 NODE_VERSION = "18.20.4"
