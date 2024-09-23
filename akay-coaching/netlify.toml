@@ -3,5 +3,4 @@ command = "npm install --legacy-peer-deps --timeout=60000 && npm run build"
 publish = "akay-coaching/build"
 
 [build.environment]
-NODE_VERSION = "18.20.4"
-NPM_VERSION = "10.8.3"
+NODE_VERSION = "20"
