@@ -1,10 +1,10 @@
 [build]
 command = "npm run build"
-publish = "akay-coaching/build"
+publish = "build"
 
 [build.environment]
 NODE_VERSION = "18"
-CI = "false"
+CI = "true"
 
 [[redirects]]
 from = "/*"
