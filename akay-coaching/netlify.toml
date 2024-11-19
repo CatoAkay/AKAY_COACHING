@@ -1,8 +1,12 @@
 [build]
-command = "npm run build"
-publish = "build"
+command = "npm run build" # Command to build your React app
+publish = "akay-coaching/build" # Directory to publish your built files
+
+[build.environment]
+NODE_VERSION = "16" # Set your Node.js version (adjust as needed)
+CI = "false" # Prevent npm from skipping optional dependencies in CI
 
 [[redirects]]
-from = "/*"
+from = "/*" # Redirect all routes to index.html for React Router
 to = "/index.html"
 status = 200
