@@ -24,39 +24,47 @@ const StyledExpectDescription = styled.p`
 `;
 
 const StyledImageContainer = styled.div`
-    margin: 30px auto;
     position: relative;
+    margin: 30px auto;
     display: inline-block;
     overflow: hidden;
     border-radius: 15px; // Rounded corners for modern look
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); // Deep shadow for depth
+    max-width: 600px;
     transition: transform 0.3s ease;
 
     &:hover {
         transform: scale(1.05); // Slight zoom effect on hover
     }
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.3); // Overlay effect
-        transition: background 0.3s ease;
-    }
-
-    &:hover::after {
-        background: rgba(0, 0, 0, 0.1); // Lighten overlay on hover
+    &:hover .overlay-text {
+        opacity: 1; // Show overlay text on hover
     }
 `;
 
 const StyledExpectImage = styled.img`
     display: block;
     width: 100%;
-    max-width: 600px; // Set a max-width to prevent the image from becoming too large
     height: auto;
+    border-radius: 15px;
+`;
+
+const StyledOverlayText = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); // Semi-transparent overlay
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0; // Initially hidden
+    transition: opacity 0.3s ease;
     border-radius: 15px;
 `;
 
@@ -74,6 +82,9 @@ function Expect() {
           src="/pic/cato3.jpg"
           alt="What to Expect"
         />
+        <StyledOverlayText className="overlay-text">
+          "Believe in yourself and you’ll be unstoppable!"
+        </StyledOverlayText>
       </StyledImageContainer>
     </StyledExpectSection>
   );
