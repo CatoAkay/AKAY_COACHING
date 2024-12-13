@@ -37,16 +37,54 @@ const StyledList = styled.ul`
     }
 `;
 
-const StyledImage = styled.img`
-    width: 100%;
-    max-width: 400px; // Limit image width for better layout
-    margin: 20px auto;
-    border-radius: 15px; // Rounded corners
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); // Add shadow for depth
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+const StyledImageContainer = styled.div`
+    position: relative;
+    margin: 30px auto;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 15px; // Rounded corners for modern look
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); // Deep shadow for depth
+    max-width: 400px; // Limiting the image width to match the original size
+    height: auto;
+    transition: transform 0.3s ease; // Smooth scaling transition
+`;
 
+const StyledExpectImage = styled.img`
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+`;
+
+const StyledOverlayText = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); // Dark background with transparency
+    color: #ffffff; // White text color
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0; // Initially hidden
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); // Light text shadow for readability
+`;
+
+const StyledImageContainerHover = styled(StyledImageContainer)`
+    &:hover ${StyledExpectImage} {
+        transform: scale(1.05); // Slight zoom on hover for the image
+    }
+    &:hover ${StyledOverlayText} {
+        opacity: 1; // Make text visible when image is hovered
+    }
     &:hover {
-        transform: scale(1.05); // Slight zoom on hover
+        transform: scale(1.05); // Slight zoom on hover for the container (includes image and shadow)
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); // Stronger shadow on hover
     }
 `;
@@ -60,10 +98,15 @@ function About() {
         Hi, I'm Akay, a certified coach passionate about helping you reach your full potential. Whether it's fitness,
         health, or well-being, I'm here to guide you every step of the way.
       </StyledDescription>
-      <StyledImage
-        src="/pic/cato1.jpg"
-        alt="About Akay"
-      />
+      <StyledImageContainerHover>
+        <StyledExpectImage
+          src="/pic/cato1.jpg"
+          alt="About Akay"
+        />
+        <StyledOverlayText>
+          "Your potential is endless. Believe in yourself!"
+        </StyledOverlayText>
+      </StyledImageContainerHover>
 
       {/* What to Expect Section */}
       <StyledTitle>What to Expect</StyledTitle>
@@ -72,10 +115,15 @@ function About() {
         <li>Weekly check-ins and progress tracking</li>
         <li>Support and motivation to keep you going</li>
       </StyledList>
-      <StyledImage
-        src="/pic/cato2.jpg"
-        alt="What to Expect"
-      />
+      <StyledImageContainerHover>
+        <StyledExpectImage
+          src="/pic/cato2.jpg"
+          alt="What to Expect"
+        />
+        <StyledOverlayText>
+          "Push beyond your limits. Success is waiting!"
+        </StyledOverlayText>
+      </StyledImageContainerHover>
 
       <StyledTitle>More Info</StyledTitle>
       <StyledDescription>
