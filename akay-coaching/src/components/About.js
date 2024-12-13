@@ -37,6 +37,20 @@ const StyledList = styled.ul`
     }
 `;
 
+const StyledImage = styled.img`
+    width: 100%;
+    max-width: 400px; // Limit image width for better layout
+    margin: 20px auto;
+    border-radius: 15px; // Rounded corners
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); // Add shadow for depth
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05); // Slight zoom on hover
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); // Stronger shadow on hover
+    }
+`;
+
 function About() {
   return (
     <StyledAboutSection id="about">
@@ -46,10 +60,9 @@ function About() {
         Hi, I'm Akay, a certified coach passionate about helping you reach your full potential. Whether it's fitness,
         health, or well-being, I'm here to guide you every step of the way.
       </StyledDescription>
-      <img
+      <StyledImage
         src="/pic/cato1.jpg"
         alt="About Akay"
-        className="section-image"
       />
 
       {/* What to Expect Section */}
@@ -59,10 +72,9 @@ function About() {
         <li>Weekly check-ins and progress tracking</li>
         <li>Support and motivation to keep you going</li>
       </StyledList>
-      <img
+      <StyledImage
         src="/pic/cato2.jpg"
         alt="What to Expect"
-        className="section-image"
       />
 
       <StyledTitle>More Info</StyledTitle>
