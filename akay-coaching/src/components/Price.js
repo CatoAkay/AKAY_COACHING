@@ -29,6 +29,7 @@ const PriceBox = styled.div`
     border-radius: 10px;
     color: #b0b0b0;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 
     h3 {
         color: #dcdcdc;
@@ -41,6 +42,12 @@ const PriceBox = styled.div`
         font-weight: bold;
         margin: 0;
     }
+
+    &:hover {
+        transform: translateY(-5px); // Slight lift effect
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); // Stronger shadow for emphasis
+        background-color: rgba(50, 50, 50, 0.9); // Slightly lighter background on hover
+    }
 `;
 
 const Button = styled.button`
@@ -52,9 +59,11 @@ const Button = styled.button`
     cursor: pointer;
     font-size: 1rem;
     margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 
     &:hover {
         background-color: #1f3838; // Even darker shade on hover for contrast
+        transform: scale(1.05); // Slight scaling on hover for effect
     }
 `;
 
