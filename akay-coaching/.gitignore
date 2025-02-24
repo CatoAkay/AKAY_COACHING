@@ -51,3 +51,4 @@ coverage/
 
 # Ignore lock files
 yarn.lock
+.vercel
